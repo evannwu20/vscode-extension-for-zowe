@@ -123,19 +123,19 @@ const localize = nls.config({ messageFormat: nls.MessageFormat.file })();
 ```
 Next wrap your string with the localize function in this format
 `localize('key', 'string') i.e. localize('addEntry','Successfully called add entry.')`
-Add the key and string as a json key/value pair to the  _filename_.i18n.json file that corresponds with the file you are adding the string to.
+Add the key and string as a json key/value pair to the _filename_.i18n.json file that corresponds with the file you are adding the string to found in the i18n folder.
 
 #### Removing Strings
-- When removing strings, remove the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json)
+- When removing strings, remove the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json found in the i18n folder)
 
 #### Changing Strings
-- When changing strings, make the same change to the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json)
+- When changing strings, make the same change to the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json found in the i18n folder)
 
 ### How to Donate Translations
-1. Click [here](https://translate.zanata.org/?dswid=8786) and follow instructions under Sign Up heading to sign up to Zatana.
-2. Send an email to evann.wu@ibm.com with the email heading as ZATANA TRANSLATOR REQUEST and include the following information in the body of the email.
-    1. Zatana username
+1. Click [here](https://translate.zanata.org/?dswid=8786) and follow instructions under Sign Up heading to sign up to Zanata.
+2. Send an email to evann.wu@ibm.com with the email heading as Zanata TRANSLATOR REQUEST and include the following information in the body of the email.
+    1. Zanata username
     2. Language(s) you wish to translate
     3. Affiliation with Zowe
-3. You should receive a response within 3 days and be added to the Zatana Zowe VS Code Extension project. Click [here](http://docs.zanata.org/en/release/user-guide/translator-guide/) for more information about how to use Zanata to translate.
+3. You should receive a response within 3 days and be added to the Zanata Zowe VS Code Extension project. Click [here](http://docs.zanata.org/en/release/user-guide/translator-guide/) for more information about how to use Zanata to translate.
 
