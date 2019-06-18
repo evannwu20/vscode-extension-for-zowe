@@ -123,13 +123,13 @@ const localize = nls.config({ messageFormat: nls.MessageFormat.file })();
 ```
 Next wrap your string with the localize function in this format
 `localize('key', 'string') i.e. localize('addEntry','Successfully called add entry.')`
-Add the key and string as a json key/value pair to the  _filename_.i18n.json file that corresponds with the file you are adding the string to.
+Add the key and string as a json key/value pair to the _filename_.i18n.json file that corresponds with the file you are adding the string to found in the i18n folder.
 
 #### Removing Strings
-- When removing strings, remove the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json)
+- When removing strings, remove the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json found in the i18n folder)
 
 #### Changing Strings
-- When changing strings, make the same change to the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json)
+- When changing strings, make the same change to the key/value pair from its corresponding .json file (either package.nls.json or _filename_.i18n.json found in the i18n folder)
 
 ### How to Donate Translations
 1. Click [here](https://translate.zanata.org/?dswid=8786) and follow instructions under Sign Up heading to sign up to Zatana.
