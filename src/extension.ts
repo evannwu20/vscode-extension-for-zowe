@@ -143,7 +143,7 @@ export async function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand("zowe.uss.createFolder", async (node) => ussActions.createUSSNode(node, ussFileProvider, "directory"));
     vscode.commands.registerCommand("zowe.uss.deleteNode", async (node) => ussActions.deleteUSSNode(node, ussFileProvider, getUSSDocumentFilePath(node)));
     vscode.commands.registerCommand("zowe.uss.binary", async (node) => changeFileType(node, true, ussFileProvider));
-    vscode.commands.registerCommand("zowe.uss.text", async (node) => changeFileType(node, false, ussFileProvider));
+    vscode.commands.registerCommand("zowe.uss", async (node) => changeFileType(node, false, ussFileProvider));
     vscode.commands.registerCommand("zowe.uss.renameNode", async (node) => ussActions.renameUSSNode(node, ussFileProvider, getUSSDocumentFilePath(node)));
 
     vscode.workspace.onDidChangeConfiguration(async (e) => {
@@ -733,8 +733,13 @@ export async function deleteDataset(node: ZoweNode, datasetProvider: DatasetTree
     } catch (err) {
         log.error(localize("deleteDataSet.delete.log.error", "Error encountered when deleting data set! ") + JSON.stringify(err));
         if (err.message.includes(localize("deleteDataSet.error.notFound", "not found"))) {
+<<<<<<< HEAD
             vscode.window.showInformationMessage(localize("deleteDataSet.notFound.error.message1", "Unable to find file: ") + label +
             localize("deleteDataSet.notFound.error.message2", " was probably already deleted."));
+=======
+            vscode.window.showInformationMessage(localize("deleteDataSet.notFound.error.message1", "Unable to find file:") + label +
+            localize("deleteDataSet.notFound.error.message2", "was probably already deleted."));
+>>>>>>> e76d5ef5182b4b1eb8d6d3202df90831d609d439
         } else {
             vscode.window.showErrorMessage(err);
         }
@@ -1307,8 +1312,13 @@ export async function stopCommand(job: Job) {
 export async function deleteJob(job: Job) {
     try {
         await zowe.DeleteJobs.deleteJob(job.session, job.job.jobname, job.job.jobid);
+<<<<<<< HEAD
         vscode.window.showInformationMessage(localize("deleteJob.message.job", "Job ") + job.job.jobname + "(" + job.job.jobid + ")" +
         localize("deleteJob.message.delete", " deleted"));
+=======
+        vscode.window.showInformationMessage(localize("deleteJob.message.job", "Job ") + job.job.jobname + job.job.jobid +
+        localize("deleteJob.message.delete", "deleted"));
+>>>>>>> e76d5ef5182b4b1eb8d6d3202df90831d609d439
     } catch (error) {
         vscode.window.showErrorMessage(error.message);
     }
